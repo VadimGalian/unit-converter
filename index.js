@@ -8,6 +8,7 @@ const volumeEl = document.querySelector("#volume-conversion");
 const massEl = document.querySelector("#mass-conversion");
 const btnEl = document.querySelector("#btn-convert");
 const inputNum = document.querySelector("#input-number");
+const errorEl = document.querySelector("#error-el");
 
 inputNum.addEventListener("input", () => {
   if (inputNum.value === "00") {
@@ -25,10 +26,15 @@ inputNum.addEventListener("input", () => {
     }
   }
 
+  errorEl.style.display = 'none'
+
   if (newInput.length > 3) {
     inputNum.value = inputNum.value.slice(0, -1);
+    errorEl.style.display = 'block'
   }
 });
+
+
 
 btnEl.addEventListener("click", () => {
   render(inputNum.value);
