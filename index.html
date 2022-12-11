@@ -18,13 +18,16 @@
         <div class="container">
             <div class="upper-container">
                 <h3>Metric/Imperial Unit Conversion</h3>
-                <input id="input-number" type="number" value="1">
-                <button id ="btn-convert" class="btn-convert">Convert</button>
+                <div class="input-container">
+                    <input id="input-number" type="number" value="1">
+                    <p class="error-el" id='error-el'>*You have to enter a number 0.01 - 999</p>
+                </div>
+                <button id="btn-convert" class="btn-convert">Convert</button>
             </div>
             <div class="lower-container">
                 <div class="card">
                     <h4>Length (Meter/Feet)</h4>
-                    <p id="length-conversion" ></p>
+                    <p id="length-conversion"></p>
                 </div>
                 <div class="card">
                     <h4>Volume (Liters/Gallons)</h4>
